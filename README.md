@@ -2,7 +2,7 @@
 
 3D chat
 
-WIP
+WIP4
 
 **Requirements**
 

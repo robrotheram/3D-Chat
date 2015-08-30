@@ -1,0 +1,271 @@
+body,html{
+  height: 100%;
+  width:100%;
+  background-color:#000;
+}
+body>.container{
+  height:100%;
+  width:100%;
+  padding:0px;
+  display:table;
+}
+nav>.container{
+  width:100%;
+  display:table;
+}
+
+.wrapper{
+  display: table-row;
+  width:100%;
+  vertical-align: middle;
+  min-height: 100%;
+  height:100%;
+  margin-left: 10px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+[class*="col-lg"] {
+  margin:0px;
+  padding:0px;
+}
+.borderless tbody tr td, .borderless tbody tr, .borderless thead tr th {
+  border-radius: 5px;
+}
+.table-curved {
+  border-collapse: separate;
+  border: solid #ddd 1px;
+  border-radius: 6px;
+  border-left: 0px;
+  border-top: 0px;
+}
+
+.table-curved > thead:first-child > tr:first-child > th {
+  border-bottom: 0px;
+  border-top: solid #ddd 1px;
+}
+
+.table-curved td, .table-curved th {
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.table-curved > :first-child > :first-child > :first-child {
+  border-top-left-radius: 6px;
+}
+
+.table-curved > :first-child > :first-child > :last-child {
+  border-top-right-radius: 6px;
+}
+
+.table-curved > :last-child > :last-child > :first-child {
+  border-bottom-left-radius: 6px;
+}
+
+.table-curved > :last-child > :last-child > :last-child {
+  border-bottom-right-radius: 6px;
+}
+
+
+nav{
+  width:100%;
+  vertical-align: top;
+  display: table-row;
+}
+
+
+.header {
+  display: table-row;
+  background: gray;
+}
+.content {
+  display: table-row;  /* height is dynamic, and will expand... */
+  height: 100%;        /* ...as content is added (won't scroll) */
+
+}
+.footer {
+  display: table-row;
+  height: 150px;
+}
+
+
+
+
+.borderless tbody tr td, .borderless tbody tr, .borderless thead tr th {
+
+  border-radius: 5px;
+
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 7px;
+  left: 10;
+  width: 90%; /* fallback if needed */
+  width: calc(100% - 4em);
+}
+
+.containerbody {
+  margin-top: 60px
+}
+
+.webgl {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+}
+
+.webgl-contaner {
+  height: calc(100% - 350px);
+}
+
+.btn-container {
+  margin-top: 10px;
+  height: 100px
+}
+
+.info-container {
+  height: 250px
+}
+.materialImg {
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.panel-body-pading {
+  padding: 5px;
+}
+
+@media (min-width: 768px) {
+  .materialImg {
+    width: 100px;
+
+  }
+}
+
+.materialImg:hover {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+.materialSelected {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+hr {
+  display: block;
+
+  margin: 10px;
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: #ffffff;
+
+  border-style: inset;
+  border-width: 1px;
+}
+
+.row {
+  margin: 0px;
+}
+
+.text_center {
+  text-align: center;
+}
+
+
+table.fixed { table-layout:fixed; }
+table.fixed td, th { overflow: hidden; }
+
+
+.draggable {
+  width: 100px;
+  height: 100px;
+}
+
+.droppable {
+  background-color: #0073ea;
+}
+
+.drop-thing {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  border: solid;
+  border-radius: 50%;
+}
+
+.drop-thing:before {
+  padding-top: 100%;
+  content: '';
+  display: block;
+}
+
+.drop-thing-text {
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+
+
+
+.table-curved {
+  border-collapse: separate;
+  border: solid #ddd 1px;
+  border-radius: 6px;
+  border-left: 0px;
+  border-top: 0px;
+}
+
+.table-curved > thead:first-child > tr:first-child > th {
+  border-bottom: 0px;
+  border-top: solid #ddd 2px;
+}
+
+.table-curved td, .table-curved th {
+  border-left: 2px solid #ddd;
+  border-top: 2px solid #ddd;
+}
+
+.table-curved > :first-child > :first-child > :first-child {
+  border-top-left-radius: 6px;
+}
+
+.table-curved > :first-child > :first-child > :last-child {
+  border-top-right-radius: 6px;
+}
+
+.table-curved > :last-child > :last-child > :first-child {
+  border-bottom-left-radius: 6px;
+}
+
+.table-curved > :last-child > :last-child > :last-child {
+  border-bottom-right-radius: 6px;
+}
+
+.tr-center {
+  text-align: center;
+}
+
+.slider-bar {
+  display: block;
+  width: 80px;
+  background-color: darkred;
+  position: relative;
+}
+
+.slider, .slider-bar {
+  height: 30px;
+}
+
+.cust-buton {
+  width: 100%;
+}

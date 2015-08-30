@@ -1,0 +1,21 @@
+{
+  "name": "RequireJS Starter",
+  "version": "1.0.0",
+  "dependencies": {
+    "requirejs": "latest",
+    "jquery": "latest",
+    "jquery-ui": "",
+    "angular": "latest",
+    "threejs": "latest",
+    "three.js-controls": "latest",
+    "bootstrap": "latest",
+    "fontawesome": "latest",
+    "jqueryui-touch-punch": "",
+    "angular-route": "~1.3.14",
+    "angularAMD": "~0.2.1",
+    "angular-mocks": "~1.3.15"
+  },
+  "resolutions": {
+    "angular": "1.3.18"
+  }
+}

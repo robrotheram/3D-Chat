@@ -1,0 +1,28 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc","closure"]
+  },
+  "source": {
+    "include": [ "README.md","app/scripts/doc.js","app/scripts/app.js", "app/scripts/Controllers/", "app/scripts/3DView/" ],
+    "exclude": [ "myProject/lib/ignore.js" ],
+    "includePattern": ".+\\.js(doc)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "default": {
+      "outputSourceFiles": true
+    },
+    "systemName"      : "Documentation",
+    "footer"          : "",
+    "copyright"       : "",
+    "navType"         : "vertical",
+    "theme"           : "flatly",
+    "linenums"        : true,
+    "collapseSymbols" : false,
+    "inverseNav"      : false
+  },
+  "plugins": []
+}

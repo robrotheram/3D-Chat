@@ -1,0 +1,5 @@
+/* Feel free to use @import. r.js will merge them, when building */
+@import url("../scripts/vendor/bootstrap/dist/css/bootstrap.css");
+@import url("../scripts/vendor/fontawesome/css/font-awesome.min.css");
+@import url("customv2.css");
+@import url("customeUI/jquery-ui-1.10.0.custom.css");

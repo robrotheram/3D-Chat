@@ -48,33 +48,53 @@
      * @returns {Function} call back function Load model into array and onto the scene
      */
     meshloader: function (fileName) {
-      return function (geometry) {
-        model = new THREE.Mesh(geometry);
-        model.scale.set(15, 15, 15);
-        fileName = modelManager.pathToFile(fileName);
-        model.name = fileName;
-        model.position.set(0, 0, 0);
-
-        modelManager.MorphColorsToFaceColors(geometry);
-        var material = new THREE.MeshPhongMaterial( { color: 0xffffff, morphTargets: true, vertexColors: THREE.FaceColors, wrapAround: true, specular: 0xffffff } );
-		    var meshAnim = new THREE.MorphAnimMesh(geometry, material );
-    		meshAnim.speed = 1;
-    		meshAnim.duration = 1200;
-    		meshAnim.time = 1000 * Math.random();
-
-        meshAnim.name = fileName;
-        meshAnim.position.set(0, 0, 0);
-        modelManager.morphs[meshAnim.name] = meshAnim;
-
-        console.log("Model: "+model.name);
-
-        modelManager.models[model.name] = model;
-        modelManager.models[model.name].material = new THREE.MeshNormalMaterial();
-        modelManager.modelMaterialArray[model.name] = new THREE.MeshNormalMaterial();
-
-        modelManager.scene.add(modelManager.morphs[meshAnim.name]);
-      }
+        return function (geometry, materials) {
+            var material = new THREE.MeshFaceMaterial(materials);
+            model = new THREE.Mesh(geometry,material);
+            model.scale.set(15, 15, 15);
+            fileName = modelManager.pathToFile(fileName);
+            model.name = fileName;
+            model.position.set(0, 0, 0);
+            modelManager.models[model.name] = model;
+            modelManager.models[model.name].material = new THREE.MeshNormalMaterial();
+            modelManager.modelMaterialArray[model.name] = new THREE.MeshNormalMaterial();
+            modelManager.scene.add(modelManager.models[model.name]);
+        }
     },
+
+      morphloader: function (fileName) {
+          return function (geometry) {
+              model = new THREE.Mesh(geometry);
+              model.scale.set(15, 15, 15);
+              fileName = modelManager.pathToFile(fileName);
+              model.name = fileName;
+              model.position.set(0, 0, 0);
+
+              modelManager.MorphColorsToFaceColors(geometry);
+              var material = new THREE.MeshPhongMaterial( { color: 0xffffff, morphTargets: true, vertexColors: THREE.FaceColors, wrapAround: true, specular: 0xffffff } );
+              var meshAnim = new THREE.MorphAnimMesh(geometry, material );
+              meshAnim.speed = 1;
+              meshAnim.duration = 1200;
+              meshAnim.time = 1000 * Math.random();
+
+              var x = (getRandomInt(-(4000),(4000)))-2000;
+
+              var z = (getRandomInt(-(4000),(4000)))+2000;
+
+              meshAnim.name = fileName;
+              meshAnim.position.set(x, 0, z);
+              meshAnim.rotation.y = getRandomInt(0,360);
+              modelManager.morphs[meshAnim.name] = meshAnim;
+
+              console.log("Model: "+model.name);
+
+              modelManager.models[model.name] = model;
+              modelManager.models[model.name].material = new THREE.MeshNormalMaterial();
+              modelManager.modelMaterialArray[model.name] = new THREE.MeshNormalMaterial();
+
+              modelManager.scene.add(modelManager.morphs[meshAnim.name]);
+          }
+      },
 
 
     MorphColorsToFaceColors: function( inGeometry )

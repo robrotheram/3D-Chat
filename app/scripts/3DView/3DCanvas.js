@@ -29,7 +29,7 @@
     height: 10,
     controls: null,
     lookat: null,
-    camera: new THREE.PerspectiveCamera(28, this.width / this.height, 1, 8000),
+    camera: new THREE.PerspectiveCamera(28, this.width / this.height, 1, 100000),
     scene: new THREE.Scene(),
     tRenderer: new THREE.WebGLRenderer({alpha: true}),
     container: null,
@@ -41,7 +41,7 @@
      */
 
     updateCamera: function () {
-      this.camera = new THREE.PerspectiveCamera(28, this.width / this.height, 1, 8000);
+      this.camera = new THREE.PerspectiveCamera(28, this.width / this.height, 1, 100000);
     },
 
     /**

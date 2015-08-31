@@ -24,13 +24,25 @@
       con.append(this.container);
       this.setupControls();
       this.lookat = this.camera.lookat;
+
+
+
+
+        this.scene = new Physijs.Scene({ fixedTimeStep: 1 / 120 });
+        this.scene.setGravity(new THREE.Vector3( 0, -30, 0 ));
+        this.scene.addEventListener(
+            'update',
+            function() {
+                renderer.scene.simulate( undefined, 2 );
+            }
+        );
     },
     width: 10,
     height: 10,
     controls: null,
     lookat: null,
     camera: new THREE.PerspectiveCamera(28, this.width / this.height, 1, 100000),
-    scene: new THREE.Scene(),
+    scene:null,
     tRenderer: new THREE.WebGLRenderer({alpha: true}),
     container: null,
     /**
